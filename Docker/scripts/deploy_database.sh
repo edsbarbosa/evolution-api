@@ -2,6 +2,8 @@
 
 npx prisma migrate resolve --applied 20240609181238_init --schema ./prisma/postgresql-schema.prisma
 
+npx prisma migrate deploy --schema ./prisma/postgresql-schema.prisma
+
 source ./Docker/scripts/env_functions.sh
 
 if [ "$DOCKER_ENV" != "true" ]; then
