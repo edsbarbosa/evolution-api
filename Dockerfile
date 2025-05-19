@@ -1,7 +1,8 @@
-FROM node:20-slim AS builder
+FROM node:20-alpine AS builder
 
 RUN apk update && \
     apk add git ffmpeg wget curl bash
+    
 RUN apk add --no-cache openssl
 
 RUN apt-get update && apt-get install -y openssl libssl-dev
