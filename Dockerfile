@@ -39,7 +39,18 @@ RUN ./Docker/scripts/generate_database.sh
 
 RUN npm run build
 
-FROM node:20-alpine AS final
+FROM node:20-slim AS final
+
+RUN apt-get update && apt-get install -y \
+    tzdata \
+    ffmpeg \
+    bash \
+    openssl \
+    libssl-dev \
+    dos2unix \
+    curl \
+    ca-certificates && \
+    apt-get clean
 
 RUN apk update && \
     apk add tzdata ffmpeg bash
