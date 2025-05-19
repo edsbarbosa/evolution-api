@@ -1,10 +1,17 @@
 FROM node:20-slim AS builder
 
-RUN apt-get update && apt-get install -y git ffmpeg wget curl bash
-
-RUN apt-get update && \
-    apt-get install -y openssl libssl-dev && \
+RUN apt-get update && apt-get install -y \
+    git \
+    ffmpeg \
+    wget \
+    curl \
+    bash \
+    dos2unix \
+    openssl \
+    libssl-dev && \
     apt-get clean
+    
+ENV LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu
 
 LABEL version="2.2.0" description="Api to control whatsapp features through http requests." 
 LABEL maintainer="Davidson Gomes" git="https://github.com/DavidsonGomes"
