@@ -52,9 +52,6 @@ RUN apt-get update && apt-get install -y \
     ca-certificates && \
     apt-get clean
 
-RUN apk update && \
-    apk add tzdata ffmpeg bash
-
 ENV TZ=America/Sao_Paulo
 
 WORKDIR /evolution
