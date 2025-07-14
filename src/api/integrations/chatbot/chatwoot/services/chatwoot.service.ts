@@ -2100,7 +2100,7 @@ export class ChatwootService {
           const nameFile = `${random}.${mimeTypes.extension(mimeType)}`;
           const fileData = Buffer.from(imgBuffer.data, 'binary');
 
-          const img = await Jimp.read(buffer);
+          const img = await Jimp.read(Buffer);
           await img.cover(320, 180);
 
           const processedBuffer = await img.getBufferAsync('image/png');
