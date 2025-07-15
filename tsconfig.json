@@ -5,10 +5,10 @@
     "declaration": true,
     "target": "es2020",
     "module": "CommonJS",
-    "rootDir": "src",
+    "rootDir": "./src",
     "resolveJsonModule": true,
     "removeComments": true,
-    "outDir": "dist",
+    "outDir": "./dist",
     "noEmitOnError": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -29,7 +29,7 @@
     },
     "moduleResolution": "Node"
   },
-  "exclude": ["node_modules", "test", "dist", "prisma"],
+  "exclude": ["node_modules", "./test", "./dist", "./prisma"],
   "include": [
     "src/**/*",
     "src/**/*.json"
