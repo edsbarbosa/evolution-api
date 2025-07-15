@@ -5,7 +5,7 @@
     "declaration": true,
     "target": "es2020",
     "module": "CommonJS",
-    "rootDir": "./src",
+    "rootDir": "src",
     "resolveJsonModule": true,
     "removeComments": true,
     "outDir": "./dist",
